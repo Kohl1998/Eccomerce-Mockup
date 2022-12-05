@@ -1,0 +1,159 @@
+:root {
+    --background: #FAF9F6;
+    --Pointer: pointer;
+    --blue: blue;
+    --border: 2px dashed #000
+}
+
+body {
+    background-color: var(--background);
+}
+
+#navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+#new-collection {
+    text-align: center;
+    font-size: 30px;
+}
+
+#main-title {
+    display: flex;
+    width: 25%;
+}
+
+h1 {
+    text-transform: uppercase;
+    cursor: var(--Pointer);
+}
+
+#navbar {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#navbar p {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: var(--Pointer);
+}
+
+#Specials {
+    color: var(--blue);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#user-features {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 25%;
+    align-items: center;
+}
+
+#user-features img {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+#Hero-grid {
+    display: grid;
+    min-height: 500px;
+    height: 100vh;
+    margin: 0 5%;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: 
+    "product-one product-one product-two"
+    "product-one product-one product-two"
+    "product-one product-one CTA";
+}
+
+.Hero-Grid-Area {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+#product-one {
+    background-image: url("../assets/images/product-one.svg");
+    grid-area: product-one;
+    border: var(--border);
+}
+
+#product-two {
+grid-area: product-two;
+background-image: url("../assets/images/product-two.svg");
+margin-bottom: 5px;
+margin-left: 5px;
+border: var(--border);
+}
+
+#CTA {
+    background-image: url("../assets/images/CTA.svg");
+    grid-area: CTA;
+    justify-content: space-around;
+    cursor: var(--Pointer);
+    border: var(--border);
+    margin-left: 5px;
+}
+
+#shop-now {
+    font-size: 30px;
+    color: var(--background)
+    ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#Headline {
+    border: 5px solid #000;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    right: -60px;
+    top: 250px;
+    padding: 25px;
+    max-width: 600px;
+    z-index: 100;
+    height: 150px;
+  }
+
+  @media screen and (max-width: 480px) {
+    #navigation {display: flex;
+    flex-direction: column;}
+    #navbar {display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    #user-features {
+        justify-content: flex-end;
+        display: flex;
+        order: -1;
+    }
+    #Headline {
+        right: -85px;
+        top: 200px;
+        padding: 10px;
+    }
+    #Hero-grid {
+        display: grid;
+    min-height: 500px;
+    height: 85vh;
+    margin: 0 5%;
+    grid-template-columns: 40% 25%;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-areas: 
+    "product-one product-one product-two"
+    "product-one product-one product-two"
+    "product-one product-one CTA";
+}
+#shop-now {
+    font-size: 20px;
+}
+    }
