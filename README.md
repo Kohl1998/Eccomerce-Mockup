@@ -14,10 +14,10 @@ Afterwards, I used vscode which is an integrated development environment which a
 
 Lastly, once I was done I pushed all the updates to my remote repository from my local repo using commits, and once I was happy I deployed the changes to the live website.
 
-## Usage
+## Screenshot
 
-N/A
+[![Ecom-mockup.jpg](https://i.postimg.cc/wjNm46BW/Ecom-mockup.jpg)](https://postimg.cc/9DW0rHZT)
 
 ## License
 
-Refer to root folder. 
+Mit license
